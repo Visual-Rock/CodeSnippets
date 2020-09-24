@@ -1,10 +1,10 @@
 using System;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace BubbleSort
 {
     class Program
     {
+        // The Main entry point of the Application
         static void Main(string[] args)
         {
             // Creates an Integer Array with 12 Elements
