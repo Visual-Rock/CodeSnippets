@@ -1,6 +1,6 @@
 # CodeSnippets
  
-## algorithms
+## Algorithms
 
 ### Sorting
 
