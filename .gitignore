@@ -1,5 +1,7 @@
 .vs/
 .vscode/
 
+Test/
+
 CppProperties.json
 SortAlgorithms/a.exe

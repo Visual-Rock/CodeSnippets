@@ -21,7 +21,7 @@ int main()
     // Prints the Array before Sorting to the Console
     // to better view changes between sorted and unsorted
     std::cout << "Array before Sorting: "; printArray(arr, ARR_LENGTH(arr));
-    // Class the bubbleSort method and sorts the passed array 
+    // Calls the bubbleSort method and sorts the passed array 
     // the array length is calculated like this:
     // sizeof(arr) / sizeof(arr[0])
     // all it does is dividing the memory size of the array
