@@ -11,7 +11,9 @@
 // alternatively you can put the methodes code above
 // the main method 
 template <class T>
-void bubbleSort(T arr, int arr_length);
+void bubble_sort(T arr, int arr_length);
+template <class T>
+void bubble_sort_optimized(T arr, int arr_length);
 
 // The Main entry point of the Application
 int main() 
@@ -26,7 +28,7 @@ int main()
     // sizeof(arr) / sizeof(arr[0])
     // all it does is dividing the memory size of the array
     // by the size of one Element of the array
-    bubbleSort(arr, ARR_LENGTH(arr));
+    bubble_sort(arr, ARR_LENGTH(arr));
     // Prints the Sorted Array to the Console where you can
     // check if the array is sorted
     std::cout << "Array after Sorting: "; print_array(arr, ARR_LENGTH(arr));
@@ -61,6 +63,33 @@ void bubble_sort(T arr, int arr_length)
                 swap(&arr[i], &arr[i + 1]);
                 // sets isSorted to false because the Array is possibly not sorted
                 is_sorted = false;
+            }
+        }
+    }
+}
+
+// Creates a template parameter T
+template <class T>
+// Bubble Sort repeatedly steps through the list, 
+// compares adjacent elements and swaps them if they are in the wrong order
+// Ignores all Sorted Elements
+void bubble_sort_optimized(T arr, int arr_length)
+{
+    // loops through the Array and splits sorted and unsorted Array
+    for (int i = arr_length; i != 0; i--)
+    {
+        // loops through the unsorted Array to sort it 
+        for (int j = 0; j < i; j++)
+        {
+            // Checks if the current Array Element is Bigger than the next 
+            // Array Element.
+            // if you want the Array from Biggest to Smallest just change
+            // the > to an <.
+            if (arr[j] > arr[j + 1])
+            {
+                // swaps the Current Array Element and the
+                // next Array Element because ther are out of order
+                swap(&arr[j], &arr[j + 1]);
             }
         }
     }
