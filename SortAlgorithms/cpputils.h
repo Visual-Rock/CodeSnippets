@@ -22,15 +22,15 @@ void swap(T* a, T* b)
 // Creates a template parameter T
 template <class T>
 // Prints an given Array to the Console
-void printArray(T arr, int arrLength)
+void print_array(T arr, int arr_length)
 {
     // loops through all (exept the last) Array Elements
     // And Prints them to the Console
-    for (int i = 0; i < arrLength - 1; i++)
+    for (int i = 0; i < arr_length - 1; i++)
     {
         // Prints the Current Array Element and a comma to Seperate Array Elements
         std::cout << arr[i] << ", ";
     }
     // Prints the last Element and a Line End
-    std::cout << arr[arrLength - 1] << std::endl;
+    std::cout << arr[arr_length - 1] << std::endl;
 }
