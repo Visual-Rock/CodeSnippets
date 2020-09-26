@@ -6,3 +6,6 @@ Test/
 CppProperties.json
 SortAlgorithms/a.exe
 *.exe
+*.dia
+*.dia~
+*.mp4
