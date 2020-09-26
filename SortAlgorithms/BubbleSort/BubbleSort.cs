@@ -13,7 +13,7 @@ namespace BubbleSort
             // to better view changes between sorted and unsorted
             Console.WriteLine("Array before Sorting: [{0}]", string.Join(", ", arr));
             // Calls the bubbleSort method and sorts the passed array
-            BubbleSort(arr);
+            BubbleSortOptimized(arr);
             // Prints the Sorted Array to the Console where you can
             // check if the array is sorted
             Console.WriteLine("Array after Sorting: [{0}]", string.Join(", ", arr));
@@ -53,6 +53,35 @@ namespace BubbleSort
                 }
             }
         }
+
+        /// <summary>
+        /// Bubble Sort repeatedly steps through the list, 
+        /// compares adjacent elements and swaps them if they are in the wrong order
+        /// Ignores all Sorted Elements
+        /// </summary>
+        /// <param name="arr">The Array to Sort</param>
+        public static void BubbleSortOptimized(int[] arr)
+        {
+            // loops through the Array and splits sorted and unsorted Array
+            for (int i = arr.Length - 1; i != 0; i--)
+            {
+                // loops through the unsorted Array to sort it 
+                for (int j = 0; j < i; j++)
+                {
+                    // Checks if the current Array Element is Bigger than the next 
+                    // Array Element.
+                    // if you want the Array from Biggest to Smallest just change
+                    // the > to an <.
+                    if (arr[j] > arr[j + 1])
+                    {
+                        // swaps the Current Array Element and the
+                        // next Array Element because ther are out of order
+                        Swap(arr, j, j + 1);
+                    }
+                }
+            }
+        }
+
 
         /// <summary>Swaps to Array Elements</summary>
         /// <param name="arr">The Array where to swap Elements</param>

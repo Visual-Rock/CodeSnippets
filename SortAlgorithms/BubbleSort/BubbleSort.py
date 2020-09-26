@@ -29,6 +29,35 @@ def BubbleSort(arr):
             # Increments i
             i += 1
 
+# Bubble Sort repeatedly steps through the list, 
+# compares adjacent elements and swaps them if they are in the wrong order
+# Ignores all Sorted Elements
+def BubbleSortOptimized(arr):
+    # current Array Position
+    i = len(arr) - 1
+    # loops through the Array and splits sorted and unsorted Array
+    while i != 0:
+        # Current Position in the unsorted Array
+        j = 0
+        # loops through the unsorted Array to sort it
+        while j < i:
+            # Checks if the current Array Element is Bigger than the next 
+            # Array Element.
+            # if you want the Array from Biggest to Smallest just change
+            # the > to an <.
+            if arr[j] > arr[j + 1]:
+                # Stores a's value in temp
+                temp = arr[j]
+                # Sets the Element at a's position to the value in b's position
+                arr[j] = arr[j + 1]
+                # Sets the Element at a's position to the value of temp
+                arr[j + 1] = temp
+            # Increments j
+            j += 1
+        # decrements i
+        i -= 1
+
+
 def main():
     # Creates an Integer Array with 12 Elements
     arr = [ 2, 5, 2 , 235, 2, 35, 2, 62, 51, 4, 2124, 2 ]

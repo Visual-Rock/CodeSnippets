@@ -10,7 +10,7 @@ class Program {
         // to better view changes between sorted and unsorted
         System.out.println("Array before Sorting: " + Arrays.toString(arr));
         // Calls the bubbleSort method and sorts the passed array
-        bubbleSort(arr);
+        bubbleSortOptimized(arr);
         // Prints the Sorted Array to the Console where you can
         // check if the array is sorted
         System.out.println("Array after Sorting: " + Arrays.toString(arr));
@@ -46,6 +46,31 @@ class Program {
             }
         }
     }
+
+    // Bubble Sort repeatedly steps through the list, 
+    // compares adjacent elements and swaps them if they are in the wrong order
+    // Ignores all Sorted Elements
+    public static void bubbleSortOptimized(int[] arr)
+        {
+            // loops through the Array and splits sorted and unsorted Array
+            for (int i = arr.length - 1; i != 0; i--)
+            {
+                // loops through the unsorted Array to sort it 
+                for (int j = 0; j < i; j++)
+                {
+                    // Checks if the current Array Element is Bigger than the next 
+                    // Array Element.
+                    // if you want the Array from Biggest to Smallest just change
+                    // the > to an <.
+                    if (arr[j] > arr[j + 1])
+                    {
+                        // swaps the Current Array Element and the
+                        // next Array Element because ther are out of order
+                        swap(arr, j, j + 1);
+                    }
+                }
+            }
+        }
 
     // Swaps two Elements in a given Array
     public static void swap(int[] arr, int a, int b) {

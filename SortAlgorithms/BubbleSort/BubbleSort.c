@@ -42,6 +42,28 @@ void bubbleSort(int arr[], int length)
     }
 }
 
+void bubbleSortOptimized(int arr[], int arr_length) 
+{
+    // loops through the Array and splits sorted and unsorted Array
+    for (int i = arr_length; i != 0; i--)
+    {
+        // loops through the unsorted Array to sort it 
+        for (int j = 0; j < i; j++)
+        {
+            // Checks if the current Array Element is Bigger than the next 
+            // Array Element.
+            // if you want the Array from Biggest to Smallest just change
+            // the > to an <.
+            if (arr[j] > arr[j + 1])
+            {
+                // swaps the Current Array Element and the
+                // next Array Element because ther are out of order
+                swap(&arr[j], &arr[j + 1]);
+            }
+        }
+    }
+}
+
 // method to print Array
 void printArray(int arr[], int size)
 {
