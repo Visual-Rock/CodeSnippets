@@ -2,7 +2,7 @@
 // used methods: cout (for Printing to the Console), endl
 #include <iostream>
 // Includes Array utilities
-// used methods: swap, printArray
+// used methods: swap, print_array
 // used macros: ARR_LENGTH
 #include "../cpputils.h"
 
